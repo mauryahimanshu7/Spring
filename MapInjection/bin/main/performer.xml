@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<bean id="keyboard" class="com.zensar.spring.instruments.Keyboard"></bean>
+	<bean id="fluit" class="com.zensar.spring.instruments.Fluit"></bean>
+	<bean id="guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+	<bean id="akansh" class="com.zensar.spring.performers.Instrumentalist">
+		<property name="instrumentSongMap">
+			<map>
+			<entry key-ref="guitar" value="nile nile"></entry>
+			<entry key-ref="keyboard" value="yo ho"></entry>
+			<entry key-ref="fluit" value="say so "></entry>
+			</map>
+			
+		</property>
+	
+	</bean>
+
+</beans>
