@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+	<bean id="keyboard" class="com.zensar.spring.instruments.Keyboard"></bean>
+	<bean id="akansh"
+		class="com.zensar.spring.performers.Instrumentalist">
+		<property name="instrument" ref="keyboard"></property>
+		<property name="song" value="Hall of fame"></property>
+	</bean>
+	<bean id="maurya" parent="akansh">
+		<property name="song" value="heathens"></property>
+	</bean>
+	<bean id="Guitar" class="com.zensar.spring.instruments.Guitar"></bean>
+	<bean id="himanshu" parent="maurya">
+		<property name="instrument" ref="Guitar"></property>
+
+	</bean>
+</beans>
