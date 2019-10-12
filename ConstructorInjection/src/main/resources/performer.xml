@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd ">
+<bean id="Pyare Mohan" class="com.zensar.spring.performer.Juggler">
+<constructor-arg value="3"></constructor-arg>
+</bean>
+<bean id="jhonny" class="com.zensar.spring.poems.Johnny">
+
+</bean>
+<bean id= "katrina" class="com.zensar.spring.performer.PoeticJuggler">
+<constructor-arg value="4"></constructor-arg>
+	<constructor-arg ref ="jhonny"></constructor-arg>
+</bean>
+</beans>
